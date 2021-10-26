@@ -5,7 +5,7 @@ class AppContainer extends Component<Record<string, never>, Record<string, never
   render() {
     return (
       <StrictMode>
-        <div>Hello world</p>
+        <div>Hello world</div>
       </StrictMode>
     );
   }
