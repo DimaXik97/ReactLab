@@ -1,12 +1,33 @@
-import { Component, StrictMode } from "react";
+import { Component } from "react";
 import ReactDom from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Footer from "./components/footer/footer";
+import Header from "./components/header/header";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Products from "./pages/products";
+import NotFound from "./pages/notFound";
+
+import appRoutes from "./appRoutes";
+
+import "./styles/main.scss";
 
 class AppContainer extends Component<Record<string, never>, Record<string, never>> {
   render() {
     return (
-      <StrictMode>
-        <div>Hello world!!!</div>
-      </StrictMode>
+      <BrowserRouter>
+        <Header />
+        <main>
+          <Routes>
+            <Route path={appRoutes.Home} element={<Home />} />
+            <Route path={appRoutes.Products} element={<Products />} />
+            <Route path={appRoutes.About} element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
     );
   }
 }

@@ -1,0 +1,40 @@
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  background-color: lightgrey;
+}
+.menu {
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+  height: 100%;
+}
+.menuItem {
+  padding: 0.2rem 1rem;
+  &:hover {
+    background-color: rgb(240, 240, 240);
+  }
+  a {
+    color: lightseagreen;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+  }
+}
+.activeLink {
+  background-color: white;
+}
+.logo {
+  align-self: center;
+  color: lightseagreen;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+}

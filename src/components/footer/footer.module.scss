@@ -1,0 +1,21 @@
+.footerWrapper {
+  min-height: 2rem;
+  background-color: lightslategray;
+  color: white;
+  ul {
+    list-style: none;
+    padding: 0;
+    a {
+      color: white;
+      text-decoration: none;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  * {
+    margin: auto;
+    width: fit-content;
+  }
+}
