@@ -1,12 +1,11 @@
 import { FC } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Products from "./pages/products";
-import NotFound from "./pages/notFound";
 import ErrorBoundary from "./errorBoundary";
 import appRoutes from "./appRoutes";
 
@@ -20,7 +19,7 @@ const App: FC = () => {
           <Route path={appRoutes.Home} element={<Home />} />
           <Route path={appRoutes.Products} element={<Products />} />
           <Route path={appRoutes.About} element={<About />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Navigate to={appRoutes.Home} />} />
         </Routes>
       </main>
       <Footer />
